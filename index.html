@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Código do Atalho | Dr. Reginaldo Oliveira</title>
+    <meta name="description" content="Descubra por que o esforço burro te mantém pobre e a preguiça estratégica te deixa rico. O guia técnico para a sua liberdade financeira em 2026.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f7ff',
+                            500: '#6366f1', // Indigo Vibrant
+                            600: '#4f46e5',
+                            accent: '#fbbf24', // Amber para destaque de preço
+                        },
+                        dark: {
+                            950: '#020617', // Black Slate
+                            900: '#0f172a',
+                            800: '#1e293b',
+                        }
+                    },
+                    animation: {
+                        'aurora': 'aurora 60s linear infinite',
+                        'shimmer': 'shimmer 2.5s infinite linear',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        aurora: {
+                            from: { backgroundPosition: '50% 50%, 50% 50%' },
+                            to: { backgroundPosition: '350% 50%, 350% 50%' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #020617; color: #f8fafc; cursor: default; }
+       .glass { background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+       .text-gradient { background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+       .aurora-bg {
+            background-image: radial-gradient(circle at 20% 30%, #312e81 0%, transparent 40%),
+                              radial-gradient(circle at 80% 70%, #4c1d95 0%, transparent 40%);
+            background-size: 200% 200%;
+        }
+       .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+       .bento-card:hover { transform: translateY(-5px) scale(1.01); border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5); }
+       .btn-glow {
+            background: linear-gradient(90deg, #4f46e5, #818cf8, #4f46e5);
+            background-size: 200% auto;
+            box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+        }
+       .btn-glow:hover { animation: shimmer 1.5s infinite linear; box-shadow: 0 0 30px rgba(79, 70, 229, 0.6); }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #312e81; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="fixed top-0 w-full z-50 glass border-b border-white/5">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center font-black text-white">C</div>
+                <span class="text-xl font-black tracking-tighter uppercase italic">Código<span class="text-brand-500">Atalho</span></span>
+            </div>
+            <a href="#cta" class="hidden md:block bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 active:scale-95">
+                Baixar Agora
+            </a>
+        </nav>
+    </header>
+
+    <main class="relative pt-32 pb-20 md:pt-52 md:pb-40 overflow-hidden">
+        <div class="absolute inset-0 -z-10 animate-aurora aurora-bg opacity-20"></div>
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-[0.2em] text-brand-500 uppercase glass rounded-full border border-brand-500/20">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                    </span>
+                    O Manifesto dos Novos Ricos
+                </span>
+                <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tighter text-white">
+                    Trabalhar muito <br>
+                    <span class="text-gradient">é um erro de cálculo.</span>
+                </h1>
+                <p class="max-w-3xl mx-auto text-gray-400 text-lg md:text-2xl mb-12 font-light leading-relaxed">
+                    Descubra por que o <span class="text-white font-semibold">esforço burro</span> te mantém pobre e como a <span class="text-white font-semibold italic">preguiça estratégica</span> é a única chave real para a riqueza massiva em 2026.
+                </p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <a href="#cta" class="btn-glow w-full md:w-auto text-white px-12 py-6 rounded-2xl text-2xl font-black tracking-tight transform transition-all hover:scale-105 active:scale-95">
+                        DESBLOQUEAR O CÓDIGO
+                    </a>
+                    <div class="text-left hidden md:block">
+                        <p class="text-brand-accent font-black text-3xl">R$ 19,99</p>
+                        <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Valor de Lançamento</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-24 relative max-w-5xl mx-auto" data-aos="zoom-in-up" data-aos-duration="1200">
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-brand-600/20 rounded-full blur-[100px] animate-pulse"></div>
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
+                
+                <div class="relative glass rounded-[40px] p-2 md:p-4 border border-white/10 shadow-2xl overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-600/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1470" 
+                         alt="Dashboard Preview" 
+                         class="rounded-[32px] w-full object-cover opacity-90 shadow-inner group-hover:scale-[1.01] transition-transform duration-700">
+                    
+                    <div class="absolute bottom-12 left-12 right-12 text-left hidden md:block">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="h-[1px] w-12 bg-brand-500"></div>
+                            <span class="text-brand-500 font-bold tracking-[0.3em] text-xs uppercase">Capítulo 01</span>
+                        </div>
+                        <h3 class="text-4xl font-black text-white mb-2">O Princípio da Alavanca Invisível</h3>
+                        <p class="text-gray-400 max-w-xl text-lg italic">"Dê-me uma alavanca longa o suficiente e eu moverei o mundo. O seu problema é que você está tentando mover pedras de 10 toneladas com as próprias mãos."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="py-24 bg-dark-950 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-6xl font-black mb-6">A Armadilha da Linearidade</h2>
+                <p class="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">Você foi programado pela escola para vender seu tempo. Mas o tempo é finito. A riqueza só existe na <span class="text-white font-bold italic">escala</span>.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[700px]">
+                <div class="md:col-span-2 glass rounded-[32px] p-10 flex flex-col justify-end bento-card border-red-500/10 group" data-aos="fade-up">
+                    <div class="mb-auto">
+                        <span class="text-red-500 font-black text-5xl opacity-20 group-hover:opacity-100 transition-opacity">01</span>
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-4">O Fim do "Suar a Camisa"</h3>
+                    <p class="text-gray-400 leading-relaxed">Se esforço fosse sinônimo de riqueza, os trabalhadores da construção civil seriam os mais ricos do mundo. O esforço burro troca horas por dinheiro. É um suicídio financeiro.</p>
+                </div>
+
+                <div class="glass rounded-[32px] p-8 bento-card border-brand-500/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-12 w-12 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Engenharia Reversa</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Aprenda a dissecar o milhão em volume e preço. R$ 10.000,00 para 100 pessoas é muito mais fácil do que você imagina.</p>
+                </div>
+
+                <div class="glass rounded-[32px] p-8 bento-card border-purple-500/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-12 w-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Exército Silencioso</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Use o código e a inteligência artificial para substituir a necessidade de contratar 10 funcionários caros.</p>
+                </div>
+
+                <div class="md:col-span-2 glass rounded-[32px] p-10 flex flex-col md:flex-row gap-8 items-center bento-card group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-black text-white mb-4">Venda Enquanto Dorme</h3>
+                        <p class="text-gray-400">A mídia é um exército de vendedores que nunca pede aumento e nunca tira folga. Grave uma vez, venda para 500 mil pessoas.</p>
+                    </div>
+                    <div class="md:w-1/2 h-full bg-dark-900 rounded-2xl overflow-hidden border border-white/5 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-brand-500 font-mono text-xs space-y-1">
+                                <p class="animate-pulse">> Iniciando Vendas...</p>
+                                <p class="text-green-400">> Pagamento Aprovado: R$ 97,00</p>
+                                <p class="text-green-400">> Pagamento Aprovado: R$ 97,00</p>
+                                <p class="text-green-400">> Pagamento Aprovado: R$ 97,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 glass rounded-[32px] p-10 bento-card flex items-center gap-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-5xl font-black text-brand-500 italic">EXIT</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Protocolo de Saída</h4>
+                        <p class="text-sm text-gray-500">O dia em que seu rendimento passivo supera seu custo de vida. Game Over para a mediocridade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-900 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-brand-500/20 blur-[100px]"></div>
+                    <div class="relative glass p-4 rounded-[40px] transform -rotate-2">
+                        <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=1470" 
+                             alt="Dr. Reginaldo Oliveira" 
+                             class="rounded-[32px] grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <span class="text-brand-500 font-bold uppercase tracking-[0.3em] text-sm mb-4 block underline decoration-brand-500/30 underline-offset-8">O Mentor do Código</span>
+                    <h2 class="text-4xl md:text-6xl font-black text-white mb-8">Dr. Reginaldo Oliveira</h2>
+                    <p class="text-gray-400 text-lg md:text-xl leading-relaxed mb-8">
+                        Estrategista financeiro e entusiasta da automação radical. Dedicou a última década a desmontar o sistema operacional da pobreza e instalar um novo código de riqueza baseado em alavancagem de permissão zero.
+                    </p>
+                    <blockquote class="border-l-4 border-brand-500 pl-6 py-2 mb-8">
+                        <p class="text-white text-xl font-light italic">"O universo não liga para suas contas atrasadas ou para o quanto você sua. Ele só responde à eficiência."</p>
+                    </blockquote>
+                    <div class="flex gap-8 opacity-50">
+                        <div class="text-center">
+                            <p class="text-3xl font-black text-white">10k+</p>
+                            <p class="text-xs uppercase font-bold tracking-widest text-gray-500">Vidas Impactadas</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-black text-white">7+ Dig</p>
+                            <p class="text-xs uppercase font-bold tracking-widest text-gray-500">Em Equity Gerado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 aurora-bg opacity-30 animate-aurora"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="max-w-4xl mx-auto glass p-12 md:p-24 rounded-[60px] border-brand-500/20 shadow-2xl">
+                <h2 class="text-4xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tighter" data-aos="fade-up">
+                    Instale o <span class="text-gradient">Código Agora.</span>
+                </h2>
+                <p class="text-gray-400 text-xl md:text-2xl mb-12 font-light" data-aos="fade-up" data-aos-delay="100">
+                    Não é um livro de autoajuda. É um manual técnico de desmontagem. <br class="hidden md:block"> A estrada do atalho está vazia. Vai continuar no engarrafamento?
+                </p>
+
+                <div class="inline-block glass p-10 rounded-[40px] border-brand-500/30 mb-12 w-full max-w-md transform hover:scale-105 transition-transform" data-aos="zoom-in">
+                    <p class="text-gray-500 uppercase font-black tracking-[0.2em] text-xs mb-4">Acesso Imediato ao E-book</p>
+                    <div class="flex justify-center items-center gap-3">
+                        <span class="text-gray-600 line-through text-2xl font-bold">R$ 97,00</span>
+                        <span class="text-6xl md:text-7xl font-black text-white tracking-tighter">R$ 19,99</span>
+                    </div>
+                    <p class="text-brand-500 font-bold mt-4 animate-pulse">Oferta de lançamento por tempo limitado</p>
+                </div>
+
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="btn-glow block w-full py-8 rounded-[32px] text-3xl font-black text-white uppercase tracking-tighter transform active:scale-95 transition-all">
+                        QUERO O MEU ATALHO
+                    </a>
+                    
+                    <div class="flex flex-wrap justify-center gap-8 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> Compra 100% Segura</span>
+                        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> 7 Dias de Garantia</span>
+                        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> Entrega Instantânea</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-dark-950 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="w-6 h-6 bg-brand-500/50 rounded flex items-center justify-center font-black text-white text-xs">C</div>
+                <span class="text-sm font-black tracking-tighter uppercase italic text-gray-400">Código<span class="text-brand-500/50">Atalho</span></span>
+            </div>
+            <p class="text-gray-600 text-sm max-w-xl mx-auto mb-8">
+                Aviso Legal: Este livro é um guia informativo. Os resultados variam de pessoa para pessoa. O autor não se responsabiliza por decisões financeiras tomadas com base nas informações aqui contidas. O sucesso exige ação.
+            </p>
+            <p class="text-gray-700 text-xs font-bold uppercase tracking-[0.3em] mb-12">Copyright © 2026 Dr. Reginaldo Oliveira</p>
+            <div class="flex justify-center gap-10 text-xs text-gray-500 font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-white transition-colors">Políticas</a>
+                <a href="#" class="hover:text-white transition-colors">Termos</a>
+                <a href="#" class="hover:text-white transition-colors">Suporte</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-expo'
+        });
+    </script>
+</body>
+</html>
