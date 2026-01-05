@@ -1,0 +1,6 @@
+<svg width="350" height="100" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="80" height="80" rx="20" fill="#6366F1"/>
+  <text x="50" y="65" text-anchor="middle" fill="white" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="45">C</text>
+  <text x="105" y="62" fill="white" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="38" font-style="italic">CÓDIGO</text>
+  <text x="255" y="62" fill="#6366F1" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="38" font-style="italic">ATALHO</text>
+</svg>
