@@ -303,5 +303,53 @@
             easing: 'ease-out-expo'
         });
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa AOS Animation
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-expo'
+        });
+
+        // Inicializa Ícones Lucide
+        lucide.createIcons();
+
+        // --- LÓGICA DA NOTIFICAÇÃO DE VENDAS ---
+        const buyers = [
+            { name: "Carlos Eduardo", loc: "SP", initial: "CE" },
+            { name: "Ana Paula M.", loc: "RJ", initial: "AP" },
+            { name: "Dr. Fernando S.", loc: "MG", initial: "FS" },
+            { name: "Adv. Juliana R.", loc: "SC", initial: "JR" },
+            { name: "Roberto Lima", loc: "PR", initial: "RL" },
+            { name: "Mariana Costa", loc: "BA", initial: "MC" }
+        ];
+
+        function showNotification() {
+            const notification = document.getElementById('sales-notification');
+            const nameEl = document.getElementById('buyer-name');
+            const avatarEl = document.getElementById('buyer-avatar');
+            
+            // Sorteia comprador
+            const buyer = buyers[Math.floor(Math.random() * buyers.length)];
+            
+            nameEl.innerText = buyer.name;
+            avatarEl.innerText = buyer.initial;
+            
+            // Mostra
+            notification.classList.remove('translate-y-40');
+            
+            // Esconde
+            setTimeout(() => {
+                notification.classList.add('translate-y-40');
+            }, 4000);
+        }
+
+        // Inicia o ciclo de notificações
+        setTimeout(() => {
+            showNotification(); // Primeira vez
+            setInterval(showNotification, 15000 + Math.random() * 10000); // Repete aleatoriamente
+        }, 5000);
+    </script>
 </body>
 </html>
