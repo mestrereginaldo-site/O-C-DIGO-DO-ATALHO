@@ -303,53 +303,59 @@
             easing: 'ease-out-expo'
         });
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Inicializa AOS Animation
-        AOS.init({
-            duration: 800,
-            once: true,
-            easing: 'ease-out-expo'
-        });
+    <div id="sales-notification" class="fixed bottom-6 left-6 z-50 glass p-4 rounded-2xl shadow-2xl transform translate-y-40 transition-all duration-500 hidden md:flex items-center gap-4 max-w-sm border-brand-500/20">
+    <div class="relative">
+        <span class="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-black z-10"></span>
+        <div class="w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold" id="buyer-avatar">
+            RS
+        </div>
+    </div>
+    <div>
+        <p class="text-white text-sm font-bold leading-tight" id="buyer-name">Ricardo Silva</p>
+        <p class="text-gray-400 text-xs">Acabou de comprar <span class="text-brand-500 font-bold">O Código</span></p>
+        <p class="text-gray-500 text-[10px] mt-1 flex items-center gap-1">
+            <svg class="w-3 h-3 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Verificado agora
+        </p>
+    </div>
+</div>
 
-        // Inicializa Ícones Lucide
-        lucide.createIcons();
+<script>
+    // Lista de nomes falsos para simular vendas
+    const buyers = [
+        { name: "Carlos Eduardo", loc: "SP", initial: "CE" },
+        { name: "Ana Paula M.", loc: "RJ", initial: "AP" },
+        { name: "Dr. Fernando S.", loc: "MG", initial: "FS" },
+        { name: "Adv. Juliana R.", loc: "SC", initial: "JR" },
+        { name: "Roberto Lima", loc: "PR", initial: "RL" },
+        { name: "Mariana Costa", loc: "BA", initial: "MC" }
+    ];
 
-        // --- LÓGICA DA NOTIFICAÇÃO DE VENDAS ---
-        const buyers = [
-            { name: "Carlos Eduardo", loc: "SP", initial: "CE" },
-            { name: "Ana Paula M.", loc: "RJ", initial: "AP" },
-            { name: "Dr. Fernando S.", loc: "MG", initial: "FS" },
-            { name: "Adv. Juliana R.", loc: "SC", initial: "JR" },
-            { name: "Roberto Lima", loc: "PR", initial: "RL" },
-            { name: "Mariana Costa", loc: "BA", initial: "MC" }
-        ];
-
-        function showNotification() {
-            const notification = document.getElementById('sales-notification');
-            const nameEl = document.getElementById('buyer-name');
-            const avatarEl = document.getElementById('buyer-avatar');
-            
-            // Sorteia comprador
-            const buyer = buyers[Math.floor(Math.random() * buyers.length)];
-            
-            nameEl.innerText = buyer.name;
-            avatarEl.innerText = buyer.initial;
-            
-            // Mostra
-            notification.classList.remove('translate-y-40');
-            
-            // Esconde
-            setTimeout(() => {
-                notification.classList.add('translate-y-40');
-            }, 4000);
-        }
-
-        // Inicia o ciclo de notificações
+    function showNotification() {
+        const notification = document.getElementById('sales-notification');
+        const nameEl = document.getElementById('buyer-name');
+        const avatarEl = document.getElementById('buyer-avatar');
+        
+        // Sorteia um comprador da lista
+        const buyer = buyers[Math.floor(Math.random() * buyers.length)];
+        
+        nameEl.innerText = buyer.name;
+        avatarEl.innerText = buyer.initial;
+        
+        // Faz a notificação aparecer (sobe)
+        notification.classList.remove('translate-y-40');
+        
+        // Faz a notificação sumir depois de 4 segundos
         setTimeout(() => {
-            showNotification(); // Primeira vez
-            setInterval(showNotification, 15000 + Math.random() * 10000); // Repete aleatoriamente
-        }, 5000);
-    </script>
+            notification.classList.add('translate-y-40');
+        }, 4000);
+    }
+
+    // Inicia o ciclo: Primeira vez em 5s, depois repete aleatoriamente entre 15s e 25s
+    setTimeout(() => {
+        showNotification();
+        setInterval(showNotification, 15000 + Math.random() * 10000); 
+    }, 5000);
+</script>
 </body>
 </html>
